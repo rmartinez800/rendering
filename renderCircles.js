@@ -1,14 +1,10 @@
-
 function renderCircles(circles) {
-    // HINT: You probably need to write a for loop!
-    //       Or, if you're feeling fancy, use .map()
-    for (var i = 0; i < 4; i++) {
-    return `
-        <div class="text-center mt-5" style="radius: ${circles.radius} background-color: ${circles.color}">
-            
-        </div>
-    `
+    let myCircles = ' '
+    for (i = 0; i < circles.length; i++ ){
+    myCircles += `<div class="text-center mt-5" style=" width: ${circles[i].radius}px; height: ${circles[i].radius}px; background-color: ${circles[i].color}; border-radius: 50%">
+     </div> `
     }
+    return myCircles
 }
 
 function circles() {
@@ -31,7 +27,7 @@ function circles() {
             radius: 10,
             color: "#000000"
         },
-    ];
+    ]
 
     content.innerHTML = renderCircles(circlesAbstraction)
 }
